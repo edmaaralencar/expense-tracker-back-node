@@ -20,8 +20,8 @@ app.use('/api/auth', authRouter)
 app.use('/api/transactions', authMiddleware, transactionRouter)
 app.use('/api/savings', authMiddleware, savingRouter)
 
-app.route('/', (req, res) => {
-  res.json({ msg: 'Hello World' })
+app.get('/', (req, res) => {
+  res.send('Teste')
 })
 
 const PORT = process.env.PORT || 5000
